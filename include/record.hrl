@@ -1,0 +1,1 @@
+-record(person, {name=wut, age=20, pet}).

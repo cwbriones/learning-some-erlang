@@ -1,0 +1,33 @@
+Test case: construction a tree from {a, 1}, {b, 2}, {c, 3}
+
+in the naive tree you would end up with
+ {a,1}
+    \
+   {b,2}
+      \
+     {c,3}
+in the balanced tree you would end up with
+  {b,2}
+  /    \
+{a,1} {c,3}
+
+STEP 1
+
+Upon insertion:
+Node is {a, 1} and is black.
+
+STEP 2
+
+Upon insertion:
+Root Node is black {a, 1} 
+    right: red {b, 2}.
+Nothing happens.
+
+STEP 3
+
+Upon insertion:
+Root Node is black {a, 1} 
+    right: red {b, 2}.
+        right: red {c, 3}
+Violation: right is doubled right. pattern matches.
+NewData -> {b, 2}, NewLeft -> {a, 1}, NewRight -> {c, 1}, black
